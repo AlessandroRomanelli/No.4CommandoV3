@@ -14,6 +14,8 @@
     });
     //1.3 Assign the selected class to the selected box
     $(this).addClass("selected");
+    // EXTRA -- Return to the top when another tab is selected
+    $(window).scrollTop(0);
     //2. Load the corresponding div below
       //2.1 Get the id of the selected div
     selectedDiv = $(this).parent().attr("href")

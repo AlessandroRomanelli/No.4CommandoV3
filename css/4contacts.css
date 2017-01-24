@@ -22,15 +22,15 @@
 }
 
 #join-us h4 {
+  text-align: center;
   color: lightgray;
   font-size: 2em;
-  padding: 10px 100px;
   transition: .5s;
 }
 
 #join-us h4:hover {
-  transform: scale(1.2);
-  transform-origin: left;
+  transform: scale(1.5);
+  transform-origin: top;
   color: #700e0e;
   text-shadow: none;
 }

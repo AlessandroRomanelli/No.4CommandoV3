@@ -1,0 +1,77 @@
+#arsenal {
+  display: none;
+  height: 1100px;
+}
+
+#arsenal h2 {
+    margin : 20px 0 5px;
+}
+
+#arsenal-img {
+  height: 300px;
+  position : relative;
+  margin   : 10px 0;
+}
+
+#arsenal-img:after {
+  content         : "";
+  position        : absolute;
+  top             : 0;
+  right           : 0;
+  bottom          : 0;
+  left            : 0;
+  background      : url("../img/arsenal-img.jpg") no-repeat center;
+  background-size : cover;
+}
+
+#arsenal .column {
+  text-transform: uppercase;
+}
+
+#arsenal .column h3 {
+  margin-bottom: 0;
+}
+
+#arsenal .header-img {
+  margin: 0;
+}
+
+#lee-img {
+  background: url("../img/lee-img.jpg") no-repeat 0% 66%;
+  background-size: cover;
+}
+
+#sniper-img {
+  background: url("../img/sniper-img.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#sten-img {
+  background: url("../img/sten-img.jpg") no-repeat 50% 40%;
+  background-size: cover;
+}
+
+#silenced-img {
+  background: url("../img/silenced-img.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#newSten-img {
+  background: url("../img/newSten-img.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#welrod-img {
+  background: url("../img/welrod-img.jpg") no-repeat 50% 30%;
+  background-size: cover;
+}
+
+#bazooka-img {
+  background: url("../img/bazooka-img.jpg") no-repeat 50% 35%;
+  background-size: cover;
+}
+
+#bren-img {
+  background: url("../img/bren-img.jpg") no-repeat 50% 45%;
+  background-size: cover;
+}
