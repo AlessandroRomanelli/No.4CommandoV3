@@ -76,6 +76,10 @@ a:visited {
   font-weight : bold;
 }
 
+a:hover {
+  text-shadow: 0 0 2px rgba(255, 255, 255, .33);
+}
+
 .container {
   position         : relative;
   top              : 0;
@@ -103,4 +107,10 @@ a:visited {
                    0 5px 10px rgba(0,0,0,.7);
   font-size      : 3em;
   cursor         : default;
+}
+
+footer {
+  text-align: center;
+  margin: 0 auto 20px;
+  opacity: .5
 }

@@ -15,21 +15,23 @@
     //1.3 Assign the selected class to the selected box
     $(this).addClass("selected");
     //2. Load the corresponding div below
-      //2.1 Hide all the divs again
-      //2.2 Get the id of the selected div
+      //2.1 Get the id of the selected div
     selectedDiv = $(this).parent().attr("href")
-      //2.3 Hide the
+      //2.2 Check if the selected div is the homepage
     if (selectedDiv == "#title-text") {
+      //2.3 if it is, fade out the current content and bring in the homepage gradually
         $(".container").fadeOut(250);
         setInterval(function(){
-          $(selectedDiv).fadeIn(1000);
+          $(selectedDiv).fadeIn(500);
         }, 750)
-
+      //2.4 if the homepage is displayed and another div is selected, fade the homepage
+      // and show the new div gradually
     }  else if ($("#title-text").attr("style") == "display: block;") {
         $("#title-text").fadeOut(250);
         setInterval(function(){
           $(selectedDiv).fadeIn(250);
         }, 500)
+      //2.5 else just transition from div to div istantly
     } else {
       $(".container").hide();
       $(selectedDiv).show()};

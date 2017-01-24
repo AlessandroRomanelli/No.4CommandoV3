@@ -1,0 +1,76 @@
+#mods {
+  display    : none;
+  height     : 925px;
+  text-align : center;
+}
+
+#mods h2 {
+  margin : 20px 0 5px;
+}
+
+#gears-img {
+  position : relative;
+  margin   : 10px 0;
+}
+
+#gears-img:after {
+  content         : "";
+  position        : absolute;
+  top             : 0;
+  right           : 0;
+  bottom          : 0;
+  left            : 0;
+  background      : url("../img/gears.jpg") no-repeat center;
+  background-size : cover;
+}
+
+.overhead span {
+  font-size : 0.75em;
+}
+
+.overhead h3 {
+  margin    : 0 auto;
+  font-size : 2em;
+}
+
+.overhead p {
+  margin    : 10px 0;
+  color     : rgba(192,33,30,.6);
+  font-size : .7em;
+}
+
+.modlist {
+  width      : 100;
+  margin     : 25px auto;
+  padding    : 10px 50px;
+  text-align : justify;
+  transition : .25s;
+}
+
+.modlist:hover {
+  background-color : rgba(0, 0, 0, .2);
+}
+
+.modlist h3 {
+  margin     : 0 auto 10px;
+  text-align : center;
+}
+
+.column {
+  width : 50%;
+  float : left;
+  list-style: circle;
+}
+
+#mandatory {
+  height : 275px;
+}
+
+#optional {
+  text-align : center;
+}
+
+#optional li {
+  display : inline;
+  margin  : 0 50px;
+}
