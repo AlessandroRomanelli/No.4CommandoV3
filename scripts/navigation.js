@@ -18,15 +18,18 @@
       //2.1 Hide all the divs again
       //2.2 Get the id of the selected div
     selectedDiv = $(this).parent().attr("href")
-      //2.3 If the selected div is the homepage, fade in gradually
+      //2.3 Hide the
     if (selectedDiv == "#title-text") {
-        $(".container").fadeOut(500);
+        $(".container").fadeOut(250);
         setInterval(function(){
-          $(selectedDiv).fadeIn(500);
+          $(selectedDiv).fadeIn(1000);
         }, 750)
+
     }  else if ($("#title-text").attr("style") == "display: block;") {
-        $("#title-text").hide();
-        $(selectedDiv).fadeIn(500);
+        $("#title-text").fadeOut(250);
+        setInterval(function(){
+          $(selectedDiv).fadeIn(250);
+        }, 500)
     } else {
       $(".container").hide();
       $(selectedDiv).show()};

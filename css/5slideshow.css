@@ -1,0 +1,138 @@
+#gallery {
+  display: none;
+  height: 700px;
+  margin: 100px auto;
+}
+
+#gallery h2 {
+  margin-bottom: 3px;
+}
+
+#gallery p {
+  margin: 0 0 3px;
+  text-transform: uppercase;
+  font-size: .75em;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+   position : relative;
+   width    : 95%;
+   margin   : 0 auto 0;
+}
+
+.slideshow-container img {
+   border-radius : 15px;
+}
+
+/* Next & previous buttons */
+
+.next,
+.prev {
+   position      : absolute;
+   top           : 50%;
+   width         : auto;
+   margin-top    : -22px;
+   padding       : 16px;
+   color         : white;
+   border-radius : 0 50% 50% 0;
+   font-size     : 45px;
+   font-weight   : bold;
+   transition    : 0.6s ease;
+   cursor        : pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+   right         : 0;
+   border-radius : 50% 0 0 50%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.next:hover,
+.prev:hover {
+   color            : #c0211e;
+   background-color : rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+
+.text {
+   position         : absolute;
+   bottom           : 5px;
+   width            : 100%;
+   padding          : 8px 12px;
+   color            : #f2f2f2;
+   border-radius    : 0 0 15px 15px;
+   background-color : rgba(0,0,0,.75);
+   text-align       : center;
+   font-size        : 16px;
+   font-style       : italic;
+}
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+   position         : absolute;
+   top              : 2em;
+   left             : 2em;
+   padding          : 8px 12px;
+   color            : #f2f2f2;
+   border-radius    : 10px;
+   background-color : rgba(0,0,0,.75);
+   font-size        : 12px;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+   display          : inline-block;
+   width            : 13px;
+   height           : 13px;
+   margin           : 0 2px;
+   border-radius    : 50%;
+   background-color : #bbb;
+   transition       : background-color 0.6s ease;
+   cursor           : pointer;
+}
+
+.active,
+.dot:hover {
+   background-color : #717171;
+}
+
+/* Fading animation */
+
+.fade {
+   -webkit-animation-duration : 1.5s;
+   animation-duration         : 1.5s;
+   -webkit-animation-name     : fade;
+   animation-name             : fade;
+}
+
+@-webkit-keyframes fade {
+   from {
+      opacity : .4;
+   }
+
+   to {
+      opacity : 1;
+   }
+}
+
+@keyframes fade {
+   from {
+      opacity : .4;
+   }
+
+   to {
+      opacity : 1;
+   }
+}
