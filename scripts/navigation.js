@@ -4,7 +4,6 @@
 // Solution: Use jQuery to assign the selected class when an item is clicked and use the .show
 // .hide() functions to show the corresponding div.
 
-//0. Divs are hidden by default
 //1. Assign the selected class to the #top li item that is clicked.
   //1.1 Call function when the box is clicked
   $("#top li").click(function(event){
@@ -17,9 +16,18 @@
     $(this).addClass("selected");
     //2. Load the corresponding div below
       //2.1 Hide all the divs again
-    $("#title-text").hide();
-    $(".container").hide();
-      //2.2 Show the selected div
-    $selectedDiv = $($(this).parent().attr("href"))
-    $selectedDiv.fadeIn(100);
+      //2.2 Get the id of the selected div
+    selectedDiv = $(this).parent().attr("href")
+      //2.3 If the selected div is the homepage, fade in gradually
+    if (selectedDiv == "#title-text") {
+        $(".container").fadeOut(500);
+        setInterval(function(){
+          $(selectedDiv).fadeIn(500);
+        }, 750)
+    }  else if ($("#title-text").attr("style") == "display: block;") {
+        $("#title-text").hide();
+        $(selectedDiv).fadeIn(500);
+    } else {
+      $(".container").hide();
+      $(selectedDiv).show()};
 });

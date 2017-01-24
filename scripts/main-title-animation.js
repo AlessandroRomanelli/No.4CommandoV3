@@ -1,7 +1,7 @@
 $(document).ready(setTimeout(function(){
   $("#main-title img").fadeIn(750);
-}, 1000));
+}, 0));
 
 $(document).ready(setTimeout(function(){
-  $("#title-text").fadeIn(1000);
-}, 2500));
+  $("#title-text").fadeIn(2000);
+}, 500));

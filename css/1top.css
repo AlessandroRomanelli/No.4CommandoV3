@@ -39,6 +39,7 @@
   text-transform: uppercase;
   display: inline-block;
   width: 150px;
+  transition: .25s;
 }
 
 #top img {
