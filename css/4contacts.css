@@ -1,0 +1,60 @@
+#contacts {
+  display: none;
+  height: 900px;
+}
+
+#contacts h2 {
+  margin-bottom: 0;
+}
+
+#contacts img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 20px;
+  opacity: .2
+}
+
+#join-us {
+  text-align: left;
+  padding: 10px 30px;
+}
+
+#join-us h4 {
+  color: lightgray;
+  font-size: 2em;
+  padding: 10px 100px;
+  transition: .5s;
+}
+
+#join-us h4:hover {
+  transform: scale(1.2);
+  transform-origin: left;
+  color: #700e0e;
+  text-shadow: none;
+}
+
+#join-us span {
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+}
+
+#contacts-img {
+   height: 200px;
+   position : relative;
+}
+
+#contacts-img:after {
+   content         : "";
+   position        : absolute;
+   top             : 0;
+   right           : 0;
+   bottom          : 0;
+   left            : 0;
+   background      : url("../img/contacts-img.jpg") no-repeat center;
+   background-size : cover;
+}

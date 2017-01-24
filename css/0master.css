@@ -1,0 +1,101 @@
+/* Web fonts */
+
+/* Rubik */
+
+@font-face {
+   font-family : 'Rubik';
+   font-style  : normal;
+   font-weight : 400;
+   src         : local('Rubik'),
+                 local('Rubik-Regular'),
+                 url(https://fonts.gstatic.com/s/rubik/v4/9TMYrMQsWjH1a-MkCFFAmg.woff2) format('woff2');
+}
+
+@font-face {
+   font-family : 'Rubik';
+   font-style  : normal;
+   font-weight : 400;
+   src         : local('Rubik'),
+                 local('Rubik-Regular'),
+                 url(https://fonts.gstatic.com/s/rubik/v4/_mlO9_1N7oXYhEnEzC2l-g.woff2) format('woff2');
+}
+
+@font-face {
+   font-family : 'Open Sans';
+   font-style  : normal;
+   font-weight : 400;
+   src         : local('Open Sans'),
+                 local('OpenSans'),
+                 url(https://fonts.gstatic.com/s/opensans/v13/u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+}
+
+@font-face {
+   font-family : 'Open Sans';
+   font-style  : normal;
+   font-weight : 400;
+   src         : local('Open Sans'),
+                 local('OpenSans'),
+                 url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+
+/* Open Sans */
+
+/* Universal styles */
+
+* {
+   box-sizing : border-box;
+}
+
+body {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   margin           : 0;
+   color            : lightgray;
+   background-color : #212121;
+   font-family      : "Open Sans";
+}
+
+h1 {
+  font-family: "Open Sans";
+}
+
+a:link {
+  text-decoration: none;
+  color: #700e0e;
+  font-weight: bold;
+  transition: .25s;
+}
+
+a:visited {
+  color: #700e0e;
+  font-weight: bold;
+}
+
+.container {
+   position         : relative;
+   height: 1000px;
+   top              : 0;
+   width            : 900px;
+   margin           : 100px auto;
+   border           : 1px solid rgba(0,0,0,.5);
+   border-top: none;
+   border-radius: 0 0 15px 15px;
+   background-color : #1c1c1c;
+   box-shadow       : 0 0 25px 10px rgba(0, 0, 0, 0.5);
+   text-align       : center;
+}
+
+.container h2 {
+   margin         : 20px;
+   text-transform : uppercase;
+   text-shadow    : 0 1px 0 #000,
+                    0 2px 0 #b42929,
+                    0 3px 1px rgba(0,0,0,.6),
+                    0 0 5px rgba(0,0,0,.5),
+                    0 1px 3px rgba(0,0,0,.8),
+                    0 3px 5px rgba(0,0,0,.7),
+                    0 5px 10px rgba(0,0,0,.7);
+   font-size      : 3em;
+   cursor         : default;
+}
