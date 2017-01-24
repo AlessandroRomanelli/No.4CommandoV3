@@ -37,7 +37,7 @@
    right           : 0;
    bottom          : 0;
    left            : 0;
-   background      : url("../img/history-img.jpg") no-repeat center;
+   background      : url("../img/headers/history-img.jpg") no-repeat center;
    background-size : cover;
 }
 
@@ -52,7 +52,7 @@
    right           : 0;
    bottom          : 0;
    left            : 0;
-   background      : url("../img/about-img.jpg") no-repeat center;
+   background      : url("../img/headers/about-img.jpg") no-repeat center;
    background-size : cover;
 }
 
@@ -67,7 +67,7 @@
    right           : 0;
    bottom          : 0;
    left            : 0;
-   background      : url("../img/special-img.jpg") no-repeat center;
+   background      : url("../img/headers/special-img.jpg") no-repeat center;
    background-size : cover;
 }
 
