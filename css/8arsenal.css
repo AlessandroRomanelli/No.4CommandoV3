@@ -75,3 +75,7 @@
   background: url("../img/arsenal/bren-img.jpg") no-repeat 50% 45%;
   background-size: cover;
 }
+
+.column p {
+  display: none;
+}
