@@ -71,6 +71,5 @@
 }
 
 #optional li {
-  display : inline;
-  margin  : 0 50px;
+  text-align: left;
 }

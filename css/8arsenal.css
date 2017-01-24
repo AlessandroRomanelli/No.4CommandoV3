@@ -7,6 +7,13 @@
     margin : 20px 0 5px;
 }
 
+#arsenal p {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: .8em;
+  opacity: .3
+}
+
 #arsenal-img {
   height: 300px;
   position : relative;
@@ -32,8 +39,9 @@
   margin-bottom: 0;
 }
 
-#arsenal .header-img {
+.column .header-img {
   margin: 0;
+  cursor: pointer;
 }
 
 #lee-img {
