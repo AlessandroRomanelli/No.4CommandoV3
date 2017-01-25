@@ -618,7 +618,7 @@ footer {
   position      : fixed;
   top           : 47%;
   left          : 50%;
-  height        : 75%;
+  height        : 700px;
   border-radius : 15px;
   border        : 2px solid rgba(255, 255, 255, 0.35);
   transform     : translate(-50%, -50%);
