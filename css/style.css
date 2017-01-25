@@ -1,0 +1,805 @@
+/* Web fonts */
+
+/* Rubik */
+
+@font-face {
+  font-family : 'Rubik';
+  font-style  : normal;
+  font-weight : 400;
+  src         : local('Rubik'),
+                local('Rubik-Regular'),
+                url(https://fonts.gstatic.com/s/rubik/v4/9TMYrMQsWjH1a-MkCFFAmg.woff2) format('woff2');
+}
+
+@font-face {
+  font-family : 'Rubik';
+  font-style  : normal;
+  font-weight : 400;
+  src         : local('Rubik'),
+                local('Rubik-Regular'),
+                url(https://fonts.gstatic.com/s/rubik/v4/_mlO9_1N7oXYhEnEzC2l-g.woff2) format('woff2');
+}
+
+@font-face {
+  font-family : 'Open Sans';
+  font-style  : normal;
+  font-weight : 400;
+  src         : local('Open Sans'),
+                local('OpenSans'),
+                url(https://fonts.gstatic.com/s/opensans/v13/u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+}
+
+@font-face {
+  font-family : 'Open Sans';
+  font-style  : normal;
+  font-weight : 400;
+  src         : local('Open Sans'),
+                local('OpenSans'),
+                url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+
+/* Open Sans */
+
+/* Universal styles */
+
+* {
+  box-sizing : border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  position         : absolute;
+  top              : 0;
+  width            : 100%;
+  margin           : 0;
+  color            : lightgray;
+  background-color : #212121;
+  font-family      : "Open Sans";
+}
+
+h1 {
+  font-family : "Open Sans";
+}
+
+a:link {
+  color           : #700e0e;
+  text-decoration : none;
+  font-weight     : bold;
+  transition      : .25s;
+}
+
+a:visited {
+  color       : #700e0e;
+  font-weight : bold;
+}
+
+a:hover {
+  text-shadow: 0 0 2px rgba(255, 255, 255, .33);
+}
+
+.container {
+  position         : relative;
+  top              : 0;
+  width            : 900px;
+  height           : 1000px;
+  margin           : 100px auto;
+  padding-top      : 5px;
+  border           : 1px solid rgba(0,0,0,.5);
+  border-top       : none;
+  border-radius    : 0 0 15px 15px;
+  background-color : #1c1c1c;
+  box-shadow       : 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  text-align       : center;
+}
+
+.container h2 {
+  margin         : 20px;
+  text-transform : uppercase;
+  text-shadow    : 0 1px 0 #000,
+                   0 2px 0 #b42929,
+                   0 3px 1px rgba(0,0,0,.6),
+                   0 0 5px rgba(0,0,0,.5),
+                   0 1px 3px rgba(0,0,0,.8),
+                   0 3px 5px rgba(0,0,0,.7),
+                   0 5px 10px rgba(0,0,0,.7);
+  font-size      : 3em;
+  cursor         : default;
+}
+
+footer {
+  text-align: center;
+  margin: 0 auto 20px;
+  opacity: .5
+}
+
+/* ========================================================================== */
+
+#top {
+   z-index          : 1000;
+   position         : fixed;
+   top              : 0;
+   left             : 0;
+   width            : 100%;
+   height           : 100px;
+   margin           : 0;
+   border-bottom    : 1px solid rgba(0, 0, 0, .5);
+   background-color : #5a0c0c;
+   text-align       : center;
+   line-height      : 100px;
+   letter-spacing   : 2.5px;
+   transition       : .1s;
+}
+
+#top a:link {
+   color      : #1c1c1c;
+   transition : .25s;
+}
+
+#top a:visited {
+   color : #1c1c1c;
+}
+
+#top a:hover {
+   color : white;
+}
+
+#top ul {
+  padding: 0;
+  height: 100px;
+  margin: 0;
+  list-style: none;
+}
+
+#top ul li {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 130px;
+  transition: .25s;
+}
+
+#top img {
+  position: fixed;
+  left: 20px;
+  height: 75px;
+  margin: 12.5px 0;
+  float: left;
+  opacity: .8;
+}
+
+.selected {
+  color: white;
+  height: 100px;
+  background-color: #1c1c1c;
+  border: 1px solid rgba(0, 0, 0, .5);
+  border-bottom: none;
+}
+
+/* ================================================================= */
+
+#main-title {
+   z-index        : -1;
+   position       : fixed;
+   top            : 0;
+   width          : 100%;
+   height         : 950px;
+   text-align     : center;
+   text-transform : uppercase;
+   vertical-align : middle;
+   pointer-events : none;
+}
+
+#main-title:before {
+   content         : "";
+   position        : absolute;
+   top             : 0;
+   right           : 0;
+   bottom          : 0;
+   left            : 0;
+   height          : 950px;
+   opacity         : 1;
+   background      : url("../img/background.jpg") no-repeat right;
+   background-size : cover;
+}
+
+#main-title:after {
+   content          : "";
+   position         : absolute;
+   top              : 0;
+   right            : 0;
+   bottom           : 0;
+   left             : 0;
+   height           : 950px;
+   border-bottom    : 1px solid rgba(0,0,0,.5);
+   background-image : radial-gradient(
+                         circle,
+                         transparent 50%,
+                         rgba(0,0,0,.8) 110%
+                      );
+}
+
+#main-title h1 {
+   position  : relative;
+   top       : 30%;
+   margin    : 0;
+   font-size : 6em;
+   text-shadow: 0 1px 0 #000,
+                0 2px 0 #b42929,
+                0 3px 0 #912121,
+                0 4px 0 #681818,
+                0 5px 0 #3e0e0e,
+                0 6px 1px rgba(0,0,0,.6),
+                0 0 5px rgba(0,0,0,.5),
+                0 1px 3px rgba(0,0,0,.8),
+                0 3px 5px rgba(0,0,0,.7),
+                0 5px 10px rgba(0,0,0,.7),
+                0 10px 10px rgba(0,0,0,.8),
+                0 20px 20px rgba(0,0,0,.7);;
+}
+
+#main-title p {
+   position       : relative;
+   top            : 12%;
+   margin         : 0;
+   text-shadow    : 0 1px 0 #222,
+                    0 2px 0 #3e0e0e,
+                    0 3px 1px rgba(0,0,0,1),
+                    0 0 5px rgba(0,0,0,.5),
+                    0 1px 3px rgba(0,0,0,.8),
+                    0 3px 5px rgba(0,0,0,.7),
+                    0 5px 10px rgba(0,0,0,.7),
+                    0 10px 10px rgba(0,0,0,.8),
+                    0 20px 20px rgba(0,0,0,.7);
+   font-size      : 2em;
+   letter-spacing : 4px;
+}
+
+#main-title img {
+   display       : none;
+   position      : relative;
+   top           : 20%;
+   margin        : 0 auto;
+   opacity       : .85;
+   border        : 1.5px dashed black;
+   border-radius : 50%;
+   text-align    : center;
+}
+
+#title-text {
+   display    : none;
+   position   : absolute;
+   top        : 25%;
+   left       : 0;
+   width      : 100%;
+   text-align : center;
+}
+
+/* =============================================================== */
+
+#about {
+   display: none;
+   height : 1225px;
+}
+
+#about img {
+   position      : absolute;
+   bottom        : 0;
+   left          : 0;
+   width         : 100%;
+   opacity       : .2;
+   border-radius : 15px;
+}
+
+.header-img {
+   position   : relative;
+   width      : 100%;
+   height     : 100px;
+   margin-top : 25px;
+   opacity    : .6;
+   border     : 1px solid rgba(0, 0, 0, 0.5);
+   transition : .25s;
+}
+
+.header-img:hover {
+   opacity : .8;
+}
+
+#history-img {
+   position : relative;
+}
+
+#history-img:after {
+   content         : "";
+   position        : absolute;
+   top             : 0;
+   right           : 0;
+   bottom          : 0;
+   left            : 0;
+   background      : url("../img/headers/history-img.jpg") no-repeat center;
+   background-size : cover;
+}
+
+#about-img {
+   position : relative;
+}
+
+#about-img:after {
+   content         : "";
+   position        : absolute;
+   top             : 0;
+   right           : 0;
+   bottom          : 0;
+   left            : 0;
+   background      : url("../img/headers/about-img.jpg") no-repeat center;
+   background-size : cover;
+}
+
+#special-img {
+   position : relative;
+}
+
+#special-img:after {
+   content         : "";
+   position        : absolute;
+   top             : 0;
+   right           : 0;
+   bottom          : 0;
+   left            : 0;
+   background      : url("../img/headers/special-img.jpg") no-repeat 50% 75%;
+   background-size : cover;
+}
+
+#about p {
+   padding    : 10px 50px;
+   text-align : justify;
+   transition : .25s;
+}
+
+#about p:hover {
+   background-color : rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================ */
+
+#contacts {
+  display: none;
+  height: 900px;
+}
+
+#contacts h2 {
+  margin-bottom: 0;
+}
+
+#contacts img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 20px;
+  opacity: .2
+}
+
+#join-us {
+  text-align: left;
+  padding: 10px 30px;
+}
+
+#join-us h4 {
+  text-align: center;
+  color: lightgray;
+  font-size: 2em;
+  transition: .5s;
+}
+
+#join-us h4:hover {
+  transform: scale(1.5);
+  transform-origin: top;
+  color: #700e0e;
+  text-shadow: none;
+}
+
+#join-us span {
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+}
+
+#contacts-img {
+   height: 200px;
+   position : relative;
+}
+
+#contacts-img:after {
+   content         : "";
+   position        : absolute;
+   top             : 0;
+   right           : 0;
+   bottom          : 0;
+   left            : 0;
+   background      : url("../img/headers/contacts-img.jpg") no-repeat bottom;
+   background-size : cover;
+}
+
+/* ======================================================================= */
+
+#gallery {
+  display : none;
+  height  : 700px;
+  margin  : 100px auto;
+}
+
+#gallery h2 {
+  margin-bottom : 3px;
+}
+
+#gallery p {
+  margin         : 0 0 3px;
+  text-transform : uppercase;
+  font-size      : .75em;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  position : relative;
+  width    : 95%;
+  margin   : 0 auto 0;
+  cursor   : pointer;
+}
+
+.slideshow-container img {
+  border-radius : 15px;
+}
+
+/* Next & previous buttons */
+
+.next,
+.prev {
+  position      : absolute;
+  top           : 50%;
+  width         : auto;
+  margin-top    : -22px;
+  padding       : 16px;
+  color         : white;
+  border-radius : 0 50% 50% 0;
+  font-size     : 45px;
+  font-weight   : bold;
+  transition    : 0.6s ease;
+  cursor        : pointer;
+}
+
+.prev {
+  left : 0;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+  right         : 0;
+  border-radius : 50% 0 0 50%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.next:hover,
+.prev:hover {
+  color            : #c0211e;
+  background-color : rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+
+.text {
+  position         : absolute;
+  bottom           : 5px;
+  width            : 100%;
+  padding          : 8px 12px;
+  color            : #f2f2f2;
+  border-radius    : 0 0 15px 15px;
+  background-color : rgba(0,0,0,.75);
+  text-align       : center;
+  font-size        : 16px;
+  font-style       : italic;
+}
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+  position         : absolute;
+  top              : 2em;
+  left             : 2em;
+  padding          : 8px 12px;
+  color            : #f2f2f2;
+  border-radius    : 10px;
+  background-color : rgba(0,0,0,.75);
+  font-size        : 12px;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+  display          : inline-block;
+  width            : 13px;
+  height           : 13px;
+  margin           : 0 2px;
+  border-radius    : 50%;
+  background-color : #bbb;
+  transition       : background-color 0.6s ease;
+  cursor           : pointer;
+}
+
+.active,
+.dot:hover {
+  background-color : #717171;
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-duration : 1.5s;
+  animation-duration         : 1.5s;
+  -webkit-animation-name     : fade;
+  animation-name             : fade;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity : .4;
+  }
+
+  to {
+    opacity : 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity : .4;
+  }
+
+  to {
+    opacity : 1;
+  }
+}
+
+/* ======================================================== */
+
+#arsenalOverlay,
+#overlay {
+  z-index          : 1001;
+  display          : none;
+  position         : fixed;
+  top              : 0;
+  right            : 0;
+  bottom           : 0;
+  left             : 0;
+  width            : 100%;
+  height           : 1000px;
+  background-color : rgba(0, 0, 0, .9);
+}
+
+#overlay img {
+  position      : fixed;
+  top           : 50%;
+  left          : 50%;
+  height        : 95%;
+  border        : 2px solid rgba(255, 255, 255, 0.35);
+  border-radius : 15px;
+  transform     : translate(-50%, -50%);
+}
+
+#overlay p {
+  z-index          : 1002;
+  position         : absolute;
+  bottom           : 10%;
+  left             : 50%;
+  margin           : 0;
+  padding          : 10px;
+  border           : 1px solid rgba(0, 0, 0, 0.8);
+  border-radius    : 10px;
+  background-color : rgba(0, 0, 0, 0.5);
+  text-align       : center;
+  text-transform   : uppercase;
+  transform        : translateX(-50%);
+}
+
+#arsenalOverlay h3 {
+  text-align     : center;
+  text-transform : uppercase;
+  font-size      : 2em;
+}
+
+#arsenalOverlay img {
+  position      : fixed;
+  top           : 47%;
+  left          : 50%;
+  height        : 75%;
+  border-radius : 15px;
+  border        : 2px solid rgba(255, 255, 255, 0.35);
+  transform     : translate(-50%, -50%);
+}
+
+#arsenalOverlay p {
+  position   : fixed;
+  bottom     : 10%;
+  left       : 50%;
+  width      : 1000px;
+  margin     : 0 auto;
+  text-align : center;
+  transform  : translateX(-50%);
+}
+
+/* ===================================================== */
+
+#mods {
+  display    : none;
+  height     : 950px;
+  text-align : center;
+}
+
+#mods h2 {
+  margin : 20px 0 5px;
+}
+
+#gears-img {
+  position : relative;
+  margin   : 10px 0;
+}
+
+#gears-img:after {
+  content         : "";
+  position        : absolute;
+  top             : 0;
+  right           : 0;
+  bottom          : 0;
+  left            : 0;
+  background      : url("../img/headers/gears.jpg") no-repeat center;
+  background-size : cover;
+}
+
+.overhead span {
+  font-size : 0.75em;
+}
+
+.overhead h3 {
+  margin    : 0 auto;
+  font-size : 2em;
+}
+
+.overhead p {
+  margin    : 10px 0;
+  color     : rgba(192,33,30,.6);
+  font-size : .7em;
+}
+
+.modlist {
+  width      : 100;
+  margin     : 25px auto;
+  padding    : 10px 50px;
+  text-align : justify;
+  transition : .25s;
+}
+
+.modlist:hover {
+  background-color : rgba(0, 0, 0, .2);
+}
+
+.modlist h3 {
+  margin     : 0 auto 10px;
+  text-align : center;
+}
+
+.column {
+  width : 50%;
+  float : left;
+  list-style: circle;
+}
+
+#mandatory {
+  height : 275px;
+}
+
+#optional {
+  text-align : center;
+}
+
+#optional li {
+  text-align: left;
+}
+
+/* ===================================================== */
+
+#arsenal {
+  display: none;
+  height: 1100px;
+}
+
+#arsenal h2 {
+    margin : 20px 0 5px;
+}
+
+#arsenal p {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: .8em;
+  opacity: .3
+}
+
+#arsenal-img {
+  height: 300px;
+  position : relative;
+  margin   : 10px 0;
+}
+
+#arsenal-img:after {
+  content         : "";
+  position        : absolute;
+  top             : 0;
+  right           : 0;
+  bottom          : 0;
+  left            : 0;
+  background      : url("../img/arsenal/arsenal-img.jpg") no-repeat center;
+  background-size : cover;
+}
+
+#arsenal .column {
+  text-transform: uppercase;
+}
+
+#arsenal .column h3 {
+  margin-bottom: 0;
+}
+
+.column .header-img {
+  margin: 0;
+  cursor: pointer;
+}
+
+#lee-img {
+  background: url("../img/arsenal/lee-img.jpg") no-repeat 0% 66%;
+  background-size: cover;
+}
+
+#sniper-img {
+  background: url("../img/arsenal/sniper-img.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#sten-img {
+  background: url("../img/arsenal/sten-img.jpg") no-repeat 50% 40%;
+  background-size: cover;
+}
+
+#silenced-img {
+  background: url("../img/arsenal/silenced-img.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#newSten-img {
+  background: url("../img/arsenal/newSten-img.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#welrod-img {
+  background: url("../img/arsenal/welrod-img.jpg") no-repeat 50% 30%;
+  background-size: cover;
+}
+
+#bazooka-img {
+  background: url("../img/arsenal/bazooka-img.jpg") no-repeat 50% 35%;
+  background-size: cover;
+}
+
+#bren-img {
+  background: url("../img/arsenal/bren-img.jpg") no-repeat 50% 45%;
+  background-size: cover;
+}
+
+.column p {
+  display: none;
+}
