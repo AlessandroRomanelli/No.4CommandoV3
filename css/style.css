@@ -68,7 +68,6 @@ a:link {
   color           : #700e0e;
   text-decoration : none;
   font-weight     : bold;
-  transition      : .25s;
 }
 
 a:visited {
@@ -152,7 +151,7 @@ footer {
   text-transform: uppercase;
   display: inline-block;
   width: 130px;
-  transition: all .5s
+  transition: .5s;
 }
 
 #top img {
